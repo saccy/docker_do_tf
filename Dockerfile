@@ -6,4 +6,4 @@ RUN mv terraform /usr/sbin/
 RUN mv doctl /usr/sbin/
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod 755 /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "-c", "/entrypoint.sh ${*}", "--"]
