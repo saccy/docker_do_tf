@@ -1,7 +1,7 @@
 FROM saccy/azp-agent:latest
 
 # Pre-reqs
-RUN yum install -y unzip openssh nmap-ncat
+RUN yum install -y unzip openssh nmap-ncat jq
 
 # Digital Ocean CLI
 RUN curl -L https://github.com/digitalocean/doctl/releases/download/v1.60.0/doctl-1.60.0-linux-amd64.tar.gz -o doctl.tar.gz
